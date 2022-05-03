@@ -20,8 +20,8 @@ class Controller:
         self.enemies = pygame.sprite.Group()
         num_enemies = 3
         for i in range(num_enemies):
-            x = random.randrange(100, 400)
-            y = random.randrange(100, 400)
+            x = random.randrange(100, 500)
+            y = random.randrange(100, 300)
             self.enemies.add(enemy.Enemy("Boogie", x, y, 'assets/enemy.png'))
         self.hero = hero.Hero("Conan", 50, 80, "assets/hero.png")
         self.all_sprites = pygame.sprite.Group((self.hero,) + tuple(self.enemies))
@@ -71,6 +71,9 @@ class Controller:
             pygame.display.flip()
 
     def gameOver(self):
+        '''
+        
+        '''
         self.hero.kill()
         myfont = pygame.font.SysFont(None, 30)
         message = myfont.render('Game Over', False, (0, 0, 0))

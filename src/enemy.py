@@ -4,7 +4,7 @@ import random
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, name, x, y, img_file):
         '''
-        creates the enemies and gives them an image
+        creates the enemies, gives them an image, sets the speed in which they move and sets the name of the enemy
         name: str, the name of the enemies
         x: int, x-coordinate of the enemy
         y: int, y-coordinate of the enemy

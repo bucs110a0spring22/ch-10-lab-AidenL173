@@ -59,7 +59,9 @@ class Controller:
                     else:
                         self.background.fill((250, 0, 0))
                         self.enemies.add(e)
-
+                        self.enemies.add(enemy.Enemy("Boogie", random.randint(0,500), random.randint(0,300), 'assets/enemy.png'))
+                        self.all_sprites = pygame.sprite.Group((self.hero,) + tuple(self.enemies))
+                      
             # redraw the entire screen
             self.enemies.update()
             self.screen.blit(self.background, (0, 0))

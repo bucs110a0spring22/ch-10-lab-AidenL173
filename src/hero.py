@@ -23,12 +23,24 @@ class Hero(pygame.sprite.Sprite):
 
     #methods to make moving our hero easier
     def move_up(self):
+        '''
+        moves the hero up when up arrow is pressed
+        '''
         self.rect.y -= self.speed
     def move_down(self):
+        '''
+        moves the hero down when down arrow is pressed
+        '''
         self.rect.y += self.speed
     def move_left(self):
+        '''
+        moves the hero left when left arrow is pressed
+        '''
         self.rect.x -= self.speed
     def move_right(self):
+        '''
+        moves the hero right when right arrow is pressed
+        '''
         self.rect.x += self.speed
 
     def fight(self, opponent):

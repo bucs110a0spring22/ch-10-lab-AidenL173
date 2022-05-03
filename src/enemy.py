@@ -3,6 +3,13 @@ import random
 #model
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, name, x, y, img_file):
+        '''
+        creates the enemies and gives them an image
+        name: str, the name of the enemies
+        x: int, x-coordinate of the enemy
+        y: int, y-coordinate of the enemy
+        img_file: str, the image you want the enemy to look like
+        '''
         #initialize all the Sprite functionality
         pygame.sprite.Sprite.__init__(self)
 
@@ -21,4 +28,9 @@ class Enemy(pygame.sprite.Sprite):
         self.speed = 2
 
     def update(self):
-        print("'Update me,' says " + self.name)
+        '''
+        makes the enemies move randomly
+        '''
+        # print("'Update me,' says " + self.name)
+        self.rect.x += random.randint(-1,1)
+        self.rect.y += random.randint(-1,1)

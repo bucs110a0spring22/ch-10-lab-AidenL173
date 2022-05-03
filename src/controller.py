@@ -7,6 +7,11 @@ from src import enemy
 
 class Controller:
     def __init__(self, width=640, height=480):
+        '''
+        sets everything up, the hero, the enemies and the display of the screen.
+        width: int, desired width of display
+        height: int, desired height of the display
+        '''
         pygame.init()
         self.width = width
         self.height = height
@@ -28,6 +33,9 @@ class Controller:
         self.state = "GAME"
 
     def mainLoop(self):
+        '''
+        starts the game and ends the game when necessary
+        '''
         while True:
             if(self.state == "GAME"):
                 self.gameLoop()
@@ -35,6 +43,9 @@ class Controller:
                 self.gameOver()
 
     def gameLoop(self):
+        '''
+        makes it so that the hero can move according to the keys that the user presses, accounts for the collision of the hero and enemies and updates the display
+        '''
         while self.state == "GAME":
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -74,7 +85,7 @@ class Controller:
 
     def gameOver(self):
         '''
-        
+        displays game over when the hero dies and ends
         '''
         self.hero.kill()
         myfont = pygame.font.SysFont(None, 30)

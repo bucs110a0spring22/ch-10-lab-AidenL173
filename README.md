@@ -10,12 +10,12 @@ Replace anything surrounded by the `< >` symbols._
 ## SUMMARY:
  < Provide a short description of your program's functionality. No more than a couple sentences. >
 #### Unique Feature
- < Describe the unique feature you added >
+In the event that the hero's attack fails, another enemy will spawn randomly somewhere on the display.
 
 ## GRACE DAYS
-Grace days used for this assignment: < # >
+Grace days used for this assignment: 1
 
-Grace days remaining: < # >/5
+Grace days remaining: 4/5
 
 ## KNOWN BUGS AND INCOMPLETE PARTS:
 N/A
